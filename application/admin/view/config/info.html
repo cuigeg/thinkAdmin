@@ -1,0 +1,29 @@
+{extend name="main"}
+
+{block name="content"}
+
+<div class="layui-tab layui-tab-card think-bg-white">
+    <ul class="layui-tab-title notselect">
+        <li data-type='website'>网站参数设置</li>
+        <li data-type="storage">文件存储配置</li>
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item">{include file='config/info-website'}</div>
+        <div class="layui-tab-item">{include file='config/info-storage'}</div>
+    </div>
+</div>
+
+<script>
+    (function (storage) {
+        (function (type, $default, $checked) {
+            $default = $('.layui-tab ul.layui-tab-title li:first');
+            $checked = $('.layui-tab ul.layui-tab-title li[data-type="' + type + '"]');
+            ($checked.length > 0 ? $checked : $default).trigger('click');
+        })(layui.data(storage)['type'] || '');
+        $('.layui-tab ul.layui-tab-title li[data-type]').on('click', function () {
+            layui.data(storage, {key: 'type', value: this.getAttribute('data-type')});
+        });
+    })('website-config-type');
+</script>
+
+{/block}
