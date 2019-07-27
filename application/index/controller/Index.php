@@ -49,6 +49,15 @@ class Index extends Controller
         if ($tmpStr == $signature) {
             exit($echostr);//返回echostr参数
         }
+        if($tmpStr == $signature){
+            return $_GET['echostr'];
+        }else{
+            return false;
+        }
+    }
 
+    public function tt()
+    {
+        return 1111;
     }
 }
