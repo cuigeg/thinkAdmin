@@ -25,7 +25,7 @@ return [
     // 用户名
     'username'    => 'root',
     // 密码
-    'password'    => '123',
+    'password'    => 'root',
     // 编码
     'charset'     => 'utf8mb4',
     // 端口

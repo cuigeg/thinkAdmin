@@ -27,13 +27,14 @@
         <div class="layui-form-item">
             <label class="layui-form-label">新的密码</label>
             <div class="layui-input-block">
-                <input type="password" name="password" maxlength="32" pattern="^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$).{6,32}$" required placeholder="请输入新的密码" class="layui-input">
+                <input type="password" name="password" maxlength="32" pattern="^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$).{6,32}$" required placeholder="请输入符合规则的新的密码" class="layui-input">
                 <p class="help-block">密码必需包含大小写字母、数字、符号的任意两者组合。</p>
             </div>
         </div>
 
+
         <div class="layui-form-item">
-            <label class="layui-form-label">重复密码</label>
+            <label class="layui-form-label">请输入重复符合规则的密码</label>
             <div class="layui-input-block">
                 <input type="password" name="repassword" maxlength="32" pattern="^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$).{6,32}$" required placeholder="请输入重复密码" class="layui-input">
                 <p class="help-block">密码必需包含大小写字母、数字、符号的任意两者组合。</p>
